@@ -28,19 +28,19 @@ class SplashPage extends StatelessWidget {
             Align(
               alignment: Alignment.center,
               child: Column(
+                //mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: context.heightTransformer(reducedBy: 85),
+                    height: context.heightTransformer(reducedBy: 60),
                     child: Image.asset('assets/images/logo.png'),
-                  ),
-                  const SizedBox(
-                    height: 60,
                   ),
                   VakinhaButton(
                     label: 'Acessar',
                     heigth: 35,
                     width: context.widthTransformer(reducedBy: 40),
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed('auth/login');
+                    },
                   ),
                 ],
               ),

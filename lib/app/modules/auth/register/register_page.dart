@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vakinha_burguer/app/core/ui/widgets/vakinha_appbar.dart';
+import 'package:vakinha_burguer/app/core/ui/widgets/vakinha_button.dart';
+import 'package:vakinha_burguer/app/core/ui/widgets/vakinha_textformfield.dart';
 
-import '../../../core/ui/vakinha_ui.dart';
-import '../../../core/ui/widgets/vakinha_appbar.dart';
-import '../../../core/ui/widgets/vakinha_button.dart';
-import '../../../core/ui/widgets/vakinha_textformfield.dart';
-
-class RegisterPage extends StatelessWidget {
+class RegisterPage extends GetView {
   const RegisterPage({Key? key}) : super(key: key);
 
   @override
@@ -54,7 +52,7 @@ class RegisterPage extends StatelessWidget {
                     obscureText: true,
                   ),
                   const SizedBox(height: 50),
-                  Spacer(),
+                  const Spacer(),
                   VakinhaButton(
                     label: 'CADASTRAR',
                     onPressed: () {},

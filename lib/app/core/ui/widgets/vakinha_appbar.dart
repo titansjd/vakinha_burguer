@@ -18,7 +18,6 @@ class VakinhaAppbar extends AppBar {
           ),
         );
 
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

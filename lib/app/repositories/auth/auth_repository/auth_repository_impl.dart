@@ -15,6 +15,7 @@ class AuthRepositoryImpl implements AuthRepository {
 
   @override
   Future<UserModel> register(String name, String email, String password) async {
+    /*
     final result = await _restClient.post('/auth/register', {
       'name': name,
       'email': email,
@@ -35,12 +36,23 @@ class AuthRepositoryImpl implements AuthRepository {
       );
       throw RestClientException(message: message);
     }
+    */
 
     return login(email, password);
   }
 
   @override
   Future<UserModel> login(String email, String password) async {
+    final userLogged = UserModel(
+        id: 1,
+        name: 'Diego Lopes',
+        email: 'titansjd@gmail.com',
+        password: '123456');
+
+    return userLogged;
+
+    /*
+servidor foi removido
     final result = await _restClient.post('/auth/', {
       'email': email,
       'password': password,
@@ -63,5 +75,7 @@ class AuthRepositoryImpl implements AuthRepository {
     }
 
     return UserModel.fromMap(result.body);
+
+*/
   }
 }

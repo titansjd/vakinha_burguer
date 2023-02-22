@@ -7,7 +7,9 @@ class RegisterBindings implements Bindings {
   @override
   void dependencies() {
     Get.lazyPut<AuthRepository>(
-      () => AuthRepositoryImpl(restClient: Get.find()),
+      () => AuthRepositoryImpl(
+        restClient: Get.find(),
+      ),
     );
 
     Get.lazyPut(
